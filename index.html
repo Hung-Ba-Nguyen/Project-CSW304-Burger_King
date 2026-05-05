@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger King</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg position-absolute top-0 w-100 z-3" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand text-primary-custom fw-bold font-nunito brand-logo" href="#">Burger <span class="text-secondary-custom">King</span></a>
+            
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto font-nunito fw-semibold">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#feature">Feature</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#chef">Chef</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#booking">Booking</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Blog</a></li>
+                            <li><a class="dropdown-item" href="#">Testimonial</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link nav-contact" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SLIDER -->
+    <section id="hero-slider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
+            <div class="carousel-item active hero-bg" style="background-image: url('images/carousel-2.jpg');">
+                <div class="hero-overlay d-flex align-items-center justify-content-center">
+                    <div class="text-center text-white container hero-content">
+                        <h1 class="display-4 fw-bold font-nunito mb-3">World’s <span class="text-primary-custom">Best</span> Chef</h1>
+                        <p class="mb-4 mx-auto hero-desc">Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor</p>
+                        <div class="hero-buttons">
+                            <a href="#menu" class="btn btn-primary-custom text-white me-2 px-4 py-2">View Menu</a>
+                            <a href="#booking" class="btn btn-secondary-custom px-4 py-2">Book Table</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item hero-bg" style="background-image: url('images/carousel-1.jpg');">
+                <div class="hero-overlay d-flex align-items-center justify-content-center">
+                    <div class="text-center text-white container hero-content">
+                        <h1 class="display-4 fw-bold font-nunito mb-3">Fastest <span class="text-primary-custom">Order</span> Delivery</h1>
+                        <p class="mb-4 mx-auto hero-desc">Sed ultrices, est eget feugiat accumsan, dui nibh egestas tortor, ut rhoncus nibh ligula euismod quam. Proin pellentesque odio</p>
+                        <div class="hero-buttons">
+                            <a href="#menu" class="btn btn-primary-custom text-white me-2 px-4 py-2">View Menu</a>
+                            <a href="#booking" class="btn btn-secondary-custom px-4 py-2">Book Table</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item hero-bg" style="background-image: url('images/carousel-3.jpg');">
+                <div class="hero-overlay d-flex align-items-center justify-content-center">
+                    <div class="text-center text-white container hero-content">
+                        <h1 class="display-4 fw-bold font-nunito mb-3">Best <span class="text-primary-custom">Quality</span> Ingredients</h1>
+                        <p class="mb-4 mx-auto hero-desc">Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada</p>
+                        <div class="hero-buttons">
+                            <a href="#menu" class="btn btn-primary-custom text-white me-2 px-4 py-2">View Menu</a>
+                            <a href="#booking" class="btn btn-secondary-custom px-4 py-2">Book Table</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-slider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero-slider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section id="booking" class="bg-light"> 
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-7 py-5 pe-lg-5 d-flex flex-column justify-content-center">
+                    <h5 class="text-secondary-custom font-nunito mb-2">Book A Table</h5>
+                    <h1 class="font-nunito fw-bold mb-4 booking-main-title">Book Your Table For Private<br>Dinners & Happy Hours</h1>
+                    <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.</p>
+                    <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.</p>
+                </div>
+                
+                <div class="col-lg-5 bg-primary-custom p-4 p-md-5">
+                    <form class="needs-validation booking-form" novalidate>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="input-icon-wrap">
+                                    <input type="text" class="form-control" placeholder="Name" required>
+                                    <i class="far fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-icon-wrap">
+                                    <input type="email" class="form-control" placeholder="Email" required>
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-icon-wrap">
+                                    <input type="tel" class="form-control" placeholder="Mobile" required>
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-icon-wrap">
+                                    <input type="text" class="form-control" placeholder="Date" required onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">
+                                    <i class="far fa-calendar-alt"></i>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-icon-wrap">
+                                    <input type="text" class="form-control" placeholder="Time" required onfocus="(this.type='time')" onblur="if(!this.value)this.type='text'">
+                                    <i class="far fa-clock"></i>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-icon-wrap">
+                                    <select class="form-select" required>
+                                        <option value="" disabled selected>Guest</option>
+                                        <option value="1">1 Person</option>
+                                        <option value="2">2 People</option>
+                                        <option value="3">3 People</option>
+                                        <option value="4">4+ People</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button class="btn btn-light text-primary-custom w-100 py-2 btn-book-now" type="submit">Book Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 position-relative">
+                    <img src="images/about.jpg" alt="About Chef" class="img-fluid about-img-rounded w-100">
+                    <div class="play-btn d-flex align-items-center justify-content-center text-white bg-primary-custom rounded-circle position-absolute top-50 start-50 translate-middle">
+                        <i class="fas fa-play fs-3"></i>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 ps-lg-3">
+                    <h5 class="text-secondary-custom font-nunito mb-2">About Us</h5>
+                    <h1 class="font-nunito fw-bold mb-4 text-dark section-title-fw">Cooking Since 1990</h1>
+                    <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.</p>
+                    <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.</p>
+                    <a href="#booking" class="btn btn-primary-custom text-white px-4 py-2 mt-2">Book A Table</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE SECTION -->
+    <section id="feature" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0 d-flex flex-column pe-lg-4">
+                    <h5 class="text-secondary-custom font-nunito mb-2">Why Choose Us</h5>
+                    <h1 class="font-nunito fw-bold mb-4 text-dark section-title-fw">Our Key Features</h1>
+                    
+                    <div class="row g-0 mb-4 rounded overflow-hidden">
+                        <div class="col-6"><img src="images/feature-1.jpg" alt="Feature 1" class="img-fluid w-100 feature-img-thumb"></div>
+                        <div class="col-6"><img src="images/feature-2.jpg" alt="Feature 2" class="img-fluid w-100 feature-img-thumb"></div>
+                        <div class="col-6"><img src="images/feature-3.jpg" alt="Feature 3" class="img-fluid w-100 feature-img-thumb"></div>
+                        <div class="col-6"><img src="images/feature-4.jpg" alt="Feature 4" class="img-fluid w-100 feature-img-thumb"></div>
+                    </div>
+                    
+                    <p class="text-muted mb-4">Lorem ipsum dolor sit amet consec adipis elit. Phasel nec preti mi. Curabit facilis ornare velit non vulputa. Aliquam metus tortor, auctor id gravida condime, viverra quis sem. Curabit non nisl nec nisi sceleri maximus</p>
+                    <a href="#booking" class="btn btn-primary-custom text-white w-100 py-2 fw-bold mt-auto">Book A Table</a>
+                </div>
+
+                <div class="col-lg-7 ps-lg-2">
+                    <div class="row g-4 pt-lg-2">
+                        <!-- Feature Box 1 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <div class="mb-3 position-relative feature-icon-box">
+                                    <div class="bg-primary-custom rounded-circle position-absolute feature-icon-circle"></div>
+                                    <i class="fas fa-user-tie fs-2 text-secondary-custom position-relative"></i>
+                                </div>
+                                <h5 class="font-nunito fw-bold mb-2 text-dark">World’s best Chef</h5>
+                                <p class="text-muted small">Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput metus tortor</p>
+                            </div>
+                        </div>
+                        <!-- Feature Box 2 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <div class="mb-3 position-relative feature-icon-box">
+                                    <div class="bg-primary-custom rounded-circle position-absolute feature-icon-circle"></div>
+                                    <i class="fas fa-leaf fs-2 text-secondary-custom position-relative"></i>
+                                </div>
+                                <h5 class="font-nunito fw-bold mb-2 text-dark">Natural ingredients</h5>
+                                <p class="text-muted small">Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput metus tortor</p>
+                            </div>
+                        </div>
+                        <!-- Feature Box 3 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <div class="mb-3 position-relative feature-icon-box">
+                                    <div class="bg-primary-custom rounded-circle position-absolute feature-icon-circle"></div>
+                                    <i class="fas fa-medal fs-2 text-secondary-custom position-relative"></i>
+                                </div>
+                                <h5 class="font-nunito fw-bold mb-2 text-dark">Best quality products</h5>
+                                <p class="text-muted small">Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput metus tortor</p>
+                            </div>
+                        </div>
+                        <!-- Feature Box 4 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <div class="mb-3 position-relative feature-icon-box">
+                                    <div class="bg-primary-custom rounded-circle position-absolute feature-icon-circle"></div>
+                                    <i class="fas fa-carrot fs-2 text-secondary-custom position-relative"></i>
+                                </div>
+                                <h5 class="font-nunito fw-bold mb-2 text-dark">Fresh vegetables & Meet</h5>
+                                <p class="text-muted small">Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput metus tortor</p>
+                            </div>
+                        </div>
+                        <!-- Feature Box 5 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <div class="mb-3 position-relative feature-icon-box">
+                                    <div class="bg-primary-custom rounded-circle position-absolute feature-icon-circle"></div>
+                                    <i class="fas fa-shipping-fast fs-2 text-secondary-custom position-relative"></i>
+                                </div>
+                                <h5 class="font-nunito fw-bold mb-2 text-dark">Fastest door delivery</h5>
+                                <p class="text-muted small">Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput metus tortor</p>
+                            </div>
+                        </div>
+                        <!-- Feature Box 6 -->
+                        <div class="col-sm-6">
+                            <div>
+                                <div class="mb-3 position-relative feature-icon-box">
+                                    <div class="bg-primary-custom rounded-circle position-absolute feature-icon-circle"></div>
+                                    <i class="fas fa-drumstick-bite fs-2 text-secondary-custom position-relative"></i>
+                                </div>
+                                <h5 class="font-nunito fw-bold mb-2 text-dark">Ground beef & Low fat</h5>
+                                <p class="text-muted small">Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput metus tortor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section id="categories" class="bg-light">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm category-card p-4">
+                        <div class="card-body">
+                            <div class="icon-box mb-3">
+                                <i class="fas fa-hamburger"></i>
+                            </div>
+                            <h4 class="font-nunito fw-bold">Burgers</h4>
+                            <p class="text-muted">Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non vulputa. Aliquam metus tortor auctor quis sem.</p>
+                            <a href="#" class="text-primary-custom text-decoration-none view-menu-btn">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm category-card p-4">
+                        <div class="card-body">
+                            <div class="icon-box mb-3">
+                                <i class="fas fa-cookie-bite"></i>
+                            </div>
+                            <h4 class="font-nunito fw-bold">Snacks</h4>
+                            <p class="text-muted">Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non vulputa. Aliquam metus tortor auctor quis sem.</p>
+                            <a href="#" class="text-primary-custom text-decoration-none view-menu-btn">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm category-card p-4">
+                        <div class="card-body">
+                            <div class="icon-box mb-3">
+                                <i class="fas fa-cocktail"></i>
+                            </div>
+                            <h4 class="font-nunito fw-bold">Beverages</h4>
+                            <p class="text-muted">Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non vulputa. Aliquam metus tortor auctor quis sem.</p>
+                            <a href="#" class="text-primary-custom text-decoration-none view-menu-btn">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-secondary-custom font-nunito mb-2">Contact Us</h5>
+                <h1 class="font-nunito fw-bold text-dark section-title-fw">Contact For Any Query</h1>
+            </div>
+            
+            <div class="row g-4 bg-light p-4 rounded align-items-center mb-5">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center bg-primary-custom text-white rounded-circle flex-shrink-0" style="width: 50px; height: 50px;">
+                            <i class="fas fa-map-marker-alt fs-5"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-secondary-custom font-nunito fw-bold mb-1">Address</h5>
+                            <p class="text-muted mb-0">123 Street, NY, USA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center bg-primary-custom text-white rounded-circle flex-shrink-0" style="width: 50px; height: 50px;">
+                            <i class="fas fa-phone-alt fs-5"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-secondary-custom font-nunito fw-bold mb-1">Call Us</h5>
+                            <p class="text-muted mb-0">+012 345 6789</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center bg-primary-custom text-white rounded-circle flex-shrink-0" style="width: 50px; height: 50px;">
+                            <i class="fas fa-envelope fs-5"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-secondary-custom font-nunito fw-bold mb-1">Email Us</h5>
+                            <p class="text-muted mb-0">info@example.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center bg-primary-custom text-white rounded-circle flex-shrink-0" style="width: 50px; height: 50px;">
+                            <i class="fas fa-share fs-5"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-secondary-custom font-nunito fw-bold mb-1">Follow Us</h5>
+                            <div class="d-flex gap-2 mt-1">
+                                <a class="text-primary-custom" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="text-primary-custom" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="text-primary-custom" href="#"><i class="fab fa-youtube"></i></a>
+                                <a class="text-primary-custom" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="text-primary-custom" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <iframe class="rounded w-100 h-100 contact-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                        allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <input type="text" class="form-control contact-input" placeholder="Your Name">
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control contact-input" placeholder="Your Email">
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control contact-input" placeholder="Subject">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control contact-input" rows="6" placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary-custom text-white py-2 px-4 contact-submit-btn" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section id="blog" class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-secondary-custom font-nunito mb-2">Food Blog</h5>
+                <h1 class="font-nunito fw-bold text-dark section-title-fw">Latest From Food Blog</h1>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="blog-item position-relative rounded-3 overflow-hidden">
+                        <img src="images/blog-1.jpg" alt="Blog 1" class="img-fluid w-100 rounded-3">
+                        <div class="bg-white mx-3 px-4 py-4 blog-panel">
+                            <h4 class="font-nunito fw-bold text-dark mb-2">Lorem ipsum dolor sit amet</h4>
+                            
+                            <div class="d-flex align-items-center mb-3 text-muted small gap-3">
+                                <span><i class="far fa-user text-primary-custom me-1"></i>Admin</span>
+                                <span><i class="far fa-list-alt text-primary-custom me-1"></i>Food</span>
+                                <span><i class="far fa-calendar-alt text-primary-custom me-1"></i>01-Jan-2045</span>
+                                <span><i class="far fa-comments text-primary-custom me-1"></i>10</span>
+                            </div>
+
+                            <p class="text-muted mb-4 blog-desc">Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor. Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte</p>
+                            
+                            <a href="#" class="btn btn-primary-custom text-white px-3 py-2 fw-bold blog-read-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="blog-item position-relative rounded-3 overflow-hidden">
+                        <img src="images/blog-2.jpg" alt="Blog 2" class="img-fluid w-100 rounded-3">
+                        <div class="bg-white mx-3 px-4 py-4 blog-panel">
+                            <h4 class="font-nunito fw-bold text-dark mb-2">Lorem ipsum dolor sit amet</h4>
+                            
+                            <div class="d-flex align-items-center mb-3 text-muted small gap-3">
+                                <span><i class="far fa-user text-primary-custom me-1"></i>Admin</span>
+                                <span><i class="far fa-list-alt text-primary-custom me-1"></i>Food</span>
+                                <span><i class="far fa-calendar-alt text-primary-custom me-1"></i>01-Jan-2045</span>
+                                <span><i class="far fa-comments text-primary-custom me-1"></i>10</span>
+                            </div>
+
+                            <p class="text-muted mb-4 blog-desc">Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor. Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpute</p>
+                            
+                            <a href="#" class="btn btn-primary-custom text-white px-3 py-2 fw-bold blog-read-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pt-5">
+        <div class="bg-light pb-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="font-nunito fw-bold text-primary-custom mb-4 footer-title">Our Address</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt text-primary-custom me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt text-primary-custom me-3"></i>+012 345 67890</p>
+                        <p class="mb-4"><i class="fa fa-envelope text-primary-custom me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-primary-custom btn-social text-white bg-primary-custom border-0 rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-primary-custom btn-social text-white bg-primary-custom border-0 rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary-custom btn-social text-white bg-primary-custom border-0 rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-primary-custom btn-social text-white bg-primary-custom border-0 rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-primary-custom btn-social text-white bg-primary-custom border-0 rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="font-nunito fw-bold text-primary-custom mb-4 footer-title">Quick Links</h4>
+                        <a class="btn btn-link text-decoration-none text-muted d-block text-start py-1 fw-bold" href=""><i class="fas fa-chevron-right text-primary-custom me-2 small"></i>Terms of use</a>
+                        <a class="btn btn-link text-decoration-none text-muted d-block text-start py-1 fw-bold" href=""><i class="fas fa-chevron-right text-primary-custom me-2 small"></i>Privacy policy</a>
+                        <a class="btn btn-link text-decoration-none text-muted d-block text-start py-1 fw-bold" href=""><i class="fas fa-chevron-right text-primary-custom me-2 small"></i>Cookies</a>
+                        <a class="btn btn-link text-decoration-none text-muted d-block text-start py-1 fw-bold" href=""><i class="fas fa-chevron-right text-primary-custom me-2 small"></i>Help</a>
+                        <a class="btn btn-link text-decoration-none text-muted d-block text-start py-1 fw-bold" href=""><i class="fas fa-chevron-right text-primary-custom me-2 small"></i>FQAs</a>
+                    </div>
+                    
+                    <div class="col-lg-5 col-md-12">
+                        <h4 class="font-nunito fw-bold text-primary-custom mb-4 footer-title">Newsletter</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.</p>
+                        
+                        <div class="position-relative mt-4">
+                            <input class="form-control w-100 py-3 ps-4 pe-5 newsletter-input" type="text" placeholder="Email goes here">
+                            <button type="button" class="btn btn-primary-custom text-white py-2 px-4 position-absolute top-0 end-0 mt-2 me-2 newsletter-btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container pb-4 pt-4">
+            <div class="text-center text-muted">
+                Copyright © <span class="text-primary-custom">Your Site Name</span>, All Right Reserved. Designed By <span class="text-primary-custom">CSW 304</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GO TO TOP BUTTON -->
+    <a href="#" class="btn btn-primary-custom text-white btn-lg rounded-0 back-to-top position-fixed bottom-0 end-0 m-4" id="goTopBtn"><i class="fas fa-chevron-up"></i></a>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Go-To-Top
+        const goTopBtn = document.getElementById("goTopBtn");
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                goTopBtn.style.display = "flex";
+            } else {
+                goTopBtn.style.display = "none";
+            }
+        });
+
+        goTopBtn.addEventListener("click", function(event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+       
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+</body>
+</html>
